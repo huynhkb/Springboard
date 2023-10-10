@@ -1,0 +1,10 @@
+function randomGame(){
+    let counter = 0
+    const id = setInterval(function(){
+        let random = Math.random()
+        if (random > 0.75){
+            clearInterval(id);
+            console.log(counter);
+        } counter += 1
+    }, 1000) 
+}
