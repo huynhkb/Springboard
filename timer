@@ -1,0 +1,15 @@
+function countDown(num) {
+    let time = 1000
+    for (let i = num-1; i >= 0; i--){
+        if (i === 0){
+            setTimeout(function(){
+                console.log("DONE!")
+            }, time)
+            break;
+        }
+            setTimeout(function(){
+                console.log(i)
+            }, time)
+            time += 1000
+        }
+    }
