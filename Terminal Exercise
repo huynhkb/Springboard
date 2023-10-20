@@ -19,4 +19,4 @@
 10. What is a flag? Give three examples of flags you have used.
   - A flag is an addition to a command that does special function. For example, I have used -rf flag with rm to remove an entire folder with its contents. I used -1 with ls to see more information about a file. I used -a with ls to display every file/folder including ones with . 
 11. What do the r and f flags do with the rm command?
-  - f flag will not give a warning before deleting the file, r flag removes the directories. Combining these 2 flags will remove the file and its contents without a warning.
+  - f flag will not give a warning before deleting the file, r flag removes the directories. Combining these 2 flags will remove the file and its contents without a warning. 
