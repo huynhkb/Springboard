@@ -12,4 +12,4 @@ function countDown(num) {
             }, time)
             time += 1000
         }
-    }
+    } 
