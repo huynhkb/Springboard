@@ -1,0 +1,40 @@
+Part 1
+- What ***git*** command creates a branch?
+      git branch
+- What is the difference between a fast-forward and recursive merge?
+      fast-forward merge is when git can easily tell when the commits happened and "put" one set of commits on top of another chronologically.
+      recursive merge -  is when an algorithm git uses to merge branches when a simple fast-forward merge won't suffice. This is when you have different commits happened at different times on 2+ branches.
+                        This happens when someone updated the master branch and you want to merge a new feature_branch, git has to combine changes into a new commit.
+- What ***git*** command changes to another branch?
+      git checkout
+- What ***git*** command deletes a branch?
+      git branch -d 
+      git branch -D 
+- How do merge conflicts happen?
+       When there are changes to the master/main branch that happened after a branch was created. Wen there are changes to the same file from 2 different branches.
+
+Part 2
+  Fast-forward Merge 
+1. mkdir branch_time
+2. cd branch_time
+3. git init
+4. touch first.txt >>> git add first.txt   >>> git commit -m "added first.txt"
+5. git checkout -b amazing_feature
+6. touch best.txt >>> git add best.txt >>> git commit -m "added best.txt"
+7. git branch master
+8. git merge amazing_feature
+9. git branch -d amazing_feature
+
+  Recursive Merge
+1. mkdir branch_time
+2. cd branch_time
+3. git init
+4. touch first.txt second.txt
+5. git checkout -b amazing_feature
+6. echo "changing second" > second.txt
+7. git add second.txt >>> git commit -m "changing second.txt"
+8. git checkout master
+9. echo "changing first" > first.txt
+10. git add first.txt   >>> git commit -m "added first.txt"
+11. git merge amazing_feature
+12. git branch -d amazing_feature
