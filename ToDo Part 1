@@ -1,0 +1,49 @@
+const form = document.querySelector('#add-todo');
+const ul = document.querySelector("#tasklist");
+const input = document.querySelector("#task-input");
+const checkedB = document.querySelector('input[type="checkbox"]');
+const storedToDos = JSON.parse(localStorage.getItem("tasks")) || [];
+
+ul.addEventListener('click', function(e) {
+    if (e.target.tagName === 'INPUT') {
+        e.target.parentElement.classList.toggle('crossed-out')
+    }
+    else if (e.target.tagName === 'BUTTON') {
+        e.target.parentElement.remove();
+    }
+})
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const newLi = document.createElement("li");
+    newLi.innerText = input.value + " ";
+
+    const checkBox = document.createElement('input');
+    checkBox.type = "checkbox";
+
+    const btn = document.createElement('button');
+    btn.innerText = "x";
+    
+
+    newLi.classList.add('li')
+    newLi.append(btn);
+    newLi.prepend(checkBox);
+    
+    ul.append(newLi);
+    input.value = '';
+
+    storedToDos.push({ task: newLi.innerText, box: checkBox})
+    localStorage.setItem("tasks", JSON.stringify(storedToDos));
+    
+})
+
+checkedB.addEventListener('click', function(e){
+    const { checked } = checkedB;
+    if (checked) {
+        localStorage.setItem("checked", true);
+    } else {
+        localStorage.removeItem("checked");
+    }
+    e.target.parentElement.classList.toggle('crossed-out');
+})
