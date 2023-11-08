@@ -11,7 +11,7 @@ Part 1
       git branch -d 
       git branch -D 
 - How do merge conflicts happen?
-       When there are changes to the master/main branch that happened after a branch was created. Wen there are changes to the same file from 2 different branches.
+       When there are changes to the master/main branch that happened after a branch was created. Wen there are changes to the same file from 2 different branches. 
 
 Part 2
   Fast-forward Merge 
