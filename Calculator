@@ -53,3 +53,19 @@ function updateMonthly(monthly) {
   const displayRate = document.getElementById("monthly-payment");
   displayRate.innerText = '$' + monthly; 
 }
+
+
+
+//////TESTS//////
+
+
+it('should calculate the monthly rate correctly', function () {
+  const values = { amount: 1000, years: 2, rate: 4};
+  expect(calculateMonthlyPayment(values)).toEqual('43.42')
+});
+
+
+it("should return a result with 2 decimal places", function() {
+  const values = { amount: 3042, years: 4.6, rate: 5};
+  expect(calculateMonthlyPayment(values)).toEqual('62.00')
+});
