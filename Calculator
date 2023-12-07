@@ -69,3 +69,15 @@ it("should return a result with 2 decimal places", function() {
   const values = { amount: 3042, years: 4.6, rate: 5};
   expect(calculateMonthlyPayment(values)).toEqual('62.00')
 });
+
+
+describe("Testing high and low numbers", function() {
+  it("should calculate very low numbers", function() {
+    const values = { amount: 1, years: 0.1, rate: 0.1};
+    expect(calculateMonthlyPayment(values)).toEqual('1.00')
+  })
+  it("should calculate very high numbers", function() {
+    const values = { amount: 1000000, years: 200, rate: 99.99};
+    expect(calculateMonthlyPayment(values)).toEqual('83325.00')
+  })
+})
