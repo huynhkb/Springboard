@@ -1,0 +1,19 @@
+ES5 Global Constants
+var PI = 3.14;
+PI = 42; // stop me from doing this!
+
+Solution
+ES2015 Global Constants
+let PI = 3.14
+PI = 42
+
+
+- What is the difference between ***var*** and ***let***?
+    You can reassign and redeclare with var but you can only reassign with let. Var works in all scopes while let is code-block scoped only. 
+- What is the difference between **var** and ***const***?
+    Const you cannot redeclare nor reassign. Var works in all scopes while const is code-block scoped only. Also you can declare undefined with var but not with const.
+- What is the difference between **let** and **const**?
+    You can reassign with let but not with const. Also you can declare undefined with let but not with const.
+- What is hoisting?
+    Hoisting is how coding is compiled in the console. It reads the variable declaration and its values/content in order of top to bottom. When using var, you can access
+    the variable name and it's undefined before it is used later on. Function declarations are also hoisted and can be invoked "before" they are defined in a codebase. 
