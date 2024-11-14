@@ -6,6 +6,10 @@ class WordFinder():
         """Initialize with the name of the file"""
         self.filename = filename
     
+    def __repr__(self):
+        """Return a random word from the instance method read_file"""
+        return self.read_file()
+    
     def read_file(self):
         """Read the content and return as a string"""
         file = open(self.filename, 'r')
