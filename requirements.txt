@@ -1,0 +1,14 @@
+click==8.1.7
+Flask==1.1.0
+itsdangerous==1.1.0
+Jinja2==3.0.3
+MarkupSafe==3.0.2
+Werkzeug==1.0.1
+
+
+pip install flask==1.1
+pip install Jinja2==3.0.3
+pip install itsdangerous==1.1.0
+pip install werkzeug==1.0.1
+
+
