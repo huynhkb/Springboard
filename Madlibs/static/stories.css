@@ -1,0 +1,41 @@
+h1 {
+    color: brown;
+}
+
+body {
+    background-color:bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+div > div {
+    display: flex; /* Enable flexbox for label-input alignment */
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Align input and label vertically */
+    margin-bottom: 20px; /* Adds space between form fields */
+}
+
+/* Style for labels */
+label {
+    flex: 1; /* Take up space on the left */
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Makes the labels more readable */
+}
+
+/* Style for input fields */
+input {
+    flex: 1; /* Allow input fields to align to the right */
+    max-width: 200px; /* Limit the width of the input field */
+    padding: 10px; /* Adds space inside the input box */
+    border: 1px solid #ccc; /* Adds a light border to inputs */
+    border-radius: 5px; /* Adds rounded corners for inputs */
+    font-size: 16px; /* Makes input text larger and readable */
+}
