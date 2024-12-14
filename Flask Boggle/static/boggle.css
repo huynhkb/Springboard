@@ -1,0 +1,26 @@
+* {
+    background-color: bisque;
+}
+
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.board {
+    border: solid 1px rgb(11, 7, 255);
+    color:rgb(124, 57, 18);
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 170%;
+    justify-content: center;
+    margin-left: 45px;
+  }
